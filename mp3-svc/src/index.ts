@@ -3,7 +3,8 @@ import * as express from 'express';
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => {
+app.get('/token', (req, res) => {
+  const authorization = req.headers.authorization;
   res.send('Hello World!');
 });
 

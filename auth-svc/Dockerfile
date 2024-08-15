@@ -7,8 +7,10 @@ WORKDIR /app
 
 COPY ./src/ /app
 
-RUN npm i
+RUN npm ci
+RUN npm run build
 
 EXPOSE 3000
 
-CMD ["npx", "ts-node", "index.ts"]
+CMD ["node", "index.js"]
+
