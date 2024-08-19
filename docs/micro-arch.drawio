@@ -1,0 +1,193 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram name="Page-1" id="r_ViiPEViYEwGBntmVDa">
+    <mxGraphModel dx="2274" dy="1238" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="6b4MEqvbwc6XLUSWSTKF-1" target="6b4MEqvbwc6XLUSWSTKF-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="6b4MEqvbwc6XLUSWSTKF-1" target="6b4MEqvbwc6XLUSWSTKF-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" parent="1" source="6b4MEqvbwc6XLUSWSTKF-1" target="6b4MEqvbwc6XLUSWSTKF-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-369" y="143" />
+              <mxPoint x="-200" y="143" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn-icons-png.freepik.com/512/6009/6009864.png;" parent="1" vertex="1">
+          <mxGeometry x="-435" y="16" width="66" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="6b4MEqvbwc6XLUSWSTKF-4" target="6b4MEqvbwc6XLUSWSTKF-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="6b4MEqvbwc6XLUSWSTKF-4" target="6b4MEqvbwc6XLUSWSTKF-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="6b4MEqvbwc6XLUSWSTKF-4" target="6b4MEqvbwc6XLUSWSTKF-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-4" value="gateway-svc" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://bobcares.com/wp-content/uploads/2024/03/Kubernetes-Logo.wine_.png;" parent="1" vertex="1">
+          <mxGeometry x="-200" y="21.34" width="83" height="55.33" as="geometry" />
+        </mxCell>
+        <mxCell id="kV-Oe0UcgvZgLTsr31BF-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6b4MEqvbwc6XLUSWSTKF-5" target="kV-Oe0UcgvZgLTsr31BF-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-5" value="auth-svc" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://bobcares.com/wp-content/uploads/2024/03/Kubernetes-Logo.wine_.png;" parent="1" vertex="1">
+          <mxGeometry x="-70" y="-124" width="83" height="55.33" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="6b4MEqvbwc6XLUSWSTKF-6" target="6b4MEqvbwc6XLUSWSTKF-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-6" value="notification-svc" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://bobcares.com/wp-content/uploads/2024/03/Kubernetes-Logo.wine_.png;" parent="1" vertex="1">
+          <mxGeometry x="-41" y="277" width="83" height="55.33" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" parent="1" source="6b4MEqvbwc6XLUSWSTKF-7" target="6b4MEqvbwc6XLUSWSTKF-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" parent="1" source="6b4MEqvbwc6XLUSWSTKF-7" target="6b4MEqvbwc6XLUSWSTKF-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="6b4MEqvbwc6XLUSWSTKF-7" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="394" y="-140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-7" value="mp3-svc" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://bobcares.com/wp-content/uploads/2024/03/Kubernetes-Logo.wine_.png;" parent="1" vertex="1">
+          <mxGeometry x="352" y="-116" width="83" height="55.33" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;" parent="1" source="6b4MEqvbwc6XLUSWSTKF-8" target="6b4MEqvbwc6XLUSWSTKF-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="91" y="232" />
+              <mxPoint x="1" y="232" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-8" value="queue" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="31" y="34" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-21" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.opc-router.de/wp-content/uploads/2021/03/mongodb_thumbnail.png;" parent="1" vertex="1">
+          <mxGeometry x="-66" y="137" width="41" height="55.15" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-24" value="video file" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn-icons-png.flaticon.com/512/1186/1186139.png;" parent="1" vertex="1">
+          <mxGeometry x="-317" y="55" width="33" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-25" value="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="-373" y="-172" width="21" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-30" value="User login, gets access_token" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-347" y="-176.5" width="178" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-32" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://images.ctfassets.net/2ntc334xpx65/6zvoTenoZoCMsgPxhETGQo/becf2e526c0e31a069439b27eaacc7b0/resource_thumb_44.jpg;clipPath=inset(12% 27.33% 18% 25.67%);" parent="1" vertex="1">
+          <mxGeometry x="-172" y="-169.94" width="17" height="16.88" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-33" value="3" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="-367" y="23.5" width="21" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-34" value="User uploads a video with access_token" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-343" y="19" width="125" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-35" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://images.ctfassets.net/2ntc334xpx65/6zvoTenoZoCMsgPxhETGQo/becf2e526c0e31a069439b27eaacc7b0/resource_thumb_44.jpg;clipPath=inset(12% 27.33% 18% 25.67%);" parent="1" vertex="1">
+          <mxGeometry x="-221" y="25.560000000000002" width="17" height="16.88" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-36" value="4" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="-200" y="-89.67" width="21" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-37" value="gateway-svc validates token" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-258" y="-65" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-42" value="5" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="-186.5" y="146" width="21" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-43" value="gateway-svc stores video in mongodb" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-192" y="172" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-44" value="6" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="-125" y="16" width="21" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-45" value="" style="shape=image;editableCssRules=.*;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0wLjUgLTAuNSAyOCAyMSIgaGVpZ2h0PSIyMSIgd2lkdGg9IjI4Ij4mI3hhOwkgIDxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+JiN4YTsJCS5zdDB7c3RvcC1jb2xvcjojMDBjZWFjO30mI3hhOwkJLnN0MXtzdG9wLWNvbG9yOiMwNzgzOGY7fSYjeGE7CSAgPC9zdHlsZT4mI3hhOwk8ZGVmcz4mI3hhOwkJPGxpbmVhckdyYWRpZW50IGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB5Mj0iMjMuMzI5IiB4Mj0iMTcuMzc1IiB5MT0iMi40ODEiIHgxPSIyLjAzOSIgaWQ9IkEiPiYjeGE7CQkJPHN0b3AgY2xhc3M9InN0MCIvPiYjeGE7CQkJPHN0b3AgY2xhc3M9InN0MSIgb2Zmc2V0PSIxIi8+JiN4YTsJCTwvbGluZWFyR3JhZGllbnQ+JiN4YTsJPC9kZWZzPiYjeGE7CTxwYXRoIGZpbGw9InVybCgjQSkiIGQ9Ik0yMy4yODktLjVjMS4yMDMgMCAyLjIwNi40MTkgMy4wMDggMS4yNTguODAyLjgwMiAxLjIwMyAxLjc4NiAxLjIwMyAyLjk1M3YxMi41NzhjMCAxLjIwMy0uNDAxIDIuMjA2LTEuMjAzIDMuMDA4UzI0LjQ5MiAyMC41IDIzLjI4OSAyMC41SDMuNzExYy0xLjIwMyAwLTIuMjA2LS40MDEtMy4wMDgtMS4yMDNTLS41IDE3LjQ5Mi0uNSAxNi4yODlWMy43MTFDLS41IDIuNTQ0LS4wOTkgMS41Ni43MDMuNzU4IDEuNTA1LS4wODEgMi41MDgtLjUgMy43MTEtLjV6TTMuODIgMi4zNDRjLS4zNjUgMC0uNTgzLjAzNi0uNjU2LjEwOWw5LjYyNSA2LjAxNmMuMjU1LjE0Ni41MjkuMjE5LjgyLjIxOXMuNTI5LS4wNzMuNzExLS4yMTlMMjQgMi40NTNjLS4wNzMtLjA3My0uMTgyLS4xMDktLjMyOC0uMTA5aC0uMzgzem0xOS40NjkgMTUuMzY3Yy45NDggMCAxLjQyMi0uNDc0IDEuNDIyLTEuNDIyVjUuNDA2bC04Ljk2OSA1LjU3OGE0LjEyIDQuMTIgMCAwIDEtMi4yNDIuNjU2Yy0uNzY2IDAtMS41MTMtLjIxOS0yLjI0Mi0uNjU2TDIuMjg5IDUuNDA2djEwLjg4M2MwIC45NDguNDc0IDEuNDIyIDEuNDIyIDEuNDIyeiIvPiYjeGE7PC9zdmc+;" parent="1" vertex="1">
+          <mxGeometry x="33" y="12.060000000000002" width="18" height="13.5" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-47" value="gateway-svc puts a message in the queue" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-99" y="9" width="123" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-49" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://blog.kakaocdn.net/dn/bU2GVi/btr3c2hueLM/uVdxgK81jb7adFB6yKDQ40/img.png;" parent="1" vertex="1">
+          <mxGeometry x="116" y="69" width="57" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-51" value="7" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="147" y="-126" width="21" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-52" value="mp3-svc pulls the message, gets video id from message" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="180" y="-130.5" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-54" value="10" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="302" y="134.50000000000003" width="21" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-55" value="mp3-svc stores mp3 on mongodb" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="330" y="130.00000000000003" width="122" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-56" value="9" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="350" y="-241.5" width="21" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-57" value="mp3-svc converts video to mp3" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="384" y="-246" width="122" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-58" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn-icons-png.flaticon.com/512/1186/1186139.png;" parent="1" vertex="1">
+          <mxGeometry x="375" y="-202.94" width="33" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-64" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn-icons-png.flaticon.com/512/2306/2306139.png;" parent="1" vertex="1">
+          <mxGeometry x="436" y="-204.94" width="37" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-68" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.58;dx=14;notch=0;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="412" y="-194.94" width="25" height="17" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-70" value="11" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="215" y="59.5" width="21" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-71" value="mp3-svc push message to the queue&amp;nbsp;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="248" y="55" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-74" value="8" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="466" y="20.500000000000014" width="21" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-75" value="mp3-svc pulls the video from mongodb" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="494" y="16.000000000000014" width="122" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-76" value="12" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="63" y="244.5" width="21" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-77" value="notification-svc consumes the message" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="94" y="242" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-78" value="mp3 ID" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#DD344C;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.email;" parent="1" vertex="1">
+          <mxGeometry x="-312" y="249.00000000000003" width="35" height="30.96" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-79" value="13" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="-325.5" y="317.5" width="21" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-80" value="notification-svc sends email with the mp3 ID to the client" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-294.5" y="315" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-82" value="14" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="-380" y="151" width="21" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-83" value="User uses mp3 unique ID and access_token to download the mp3" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-355" y="154" width="133" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kV-Oe0UcgvZgLTsr31BF-5" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://blog.hostingdunyam.com.tr/wp-content/uploads/2018/04/sql-dosyasi-nasil-yuklenir.jpg;clipPath=inset(5.85% 24.67% 7.98% 21.33%);" vertex="1" parent="1">
+          <mxGeometry x="33" y="-192" width="52.25" height="52.25" as="geometry" />
+        </mxCell>
+        <mxCell id="kV-Oe0UcgvZgLTsr31BF-7" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="-99" y="-200" width="21" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="kV-Oe0UcgvZgLTsr31BF-8" value="auth-svc checks if user exists on mysql" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-76" y="-203.5" width="130" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
