@@ -1,5 +1,12 @@
-GET http://localhost:8080/auth/login
+@base = http://localhost:8080
 
+# @env-json-key AUTH_TOKEN access_token
+POST {{base}}/auth/login
+Authorization: Basic {{USERNAME}} {{PASSWORD}}
+Content-Type: application/json
 
+###
 
-
+POST {{base}}/auth/validate
+Authorization: Bearer {{AUTH_TOKEN}}
+Content-Type: application/json

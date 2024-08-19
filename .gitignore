@@ -1,3 +1,6 @@
 node_modules
 
 auth-svc/target
+auth-svc/volumes
+
+.env

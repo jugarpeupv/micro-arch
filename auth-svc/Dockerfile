@@ -1,16 +1,21 @@
-FROM alpine:3.14
+FROM rust:1.80.0-slim-bullseye AS build
 
-RUN apk add --update nodejs npm
-RUN apk add --no-cache bash
+# View app name in Cargo.toml
+ARG APP_NAME=auth-svc
+ENV SQLX_OFFLINE=true
 
-WORKDIR /app
+WORKDIR /build
 
-COPY ./src/ /app
+COPY Cargo.lock Cargo.toml ./
+RUN mkdir src \
+    && echo "// dummy file" > src/lib.rs \
+    && cargo build --release
 
-RUN npm ci
-RUN npm run build
+COPY src src
+COPY .sqlx .sqlx
+RUN cargo build --locked --release
+RUN cp ./target/release/$APP_NAME /bin/server
 
-EXPOSE 3000
-
-CMD ["node", "index.js"]
-
+FROM debian:bullseye-slim AS final
+COPY --from=build /bin/server /bin/
+CMD ["/bin/server"]
