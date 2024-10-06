@@ -1,0 +1,93 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram name="Page-1" id="r_ViiPEViYEwGBntmVDa">
+    <mxGraphModel dx="2274" dy="1238" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="6b4MEqvbwc6XLUSWSTKF-1" target="6b4MEqvbwc6XLUSWSTKF-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="6b4MEqvbwc6XLUSWSTKF-1" target="6b4MEqvbwc6XLUSWSTKF-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn-icons-png.freepik.com/512/6009/6009864.png;" parent="1" vertex="1">
+          <mxGeometry x="-435" y="16" width="66" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="6b4MEqvbwc6XLUSWSTKF-4" target="6b4MEqvbwc6XLUSWSTKF-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="6b4MEqvbwc6XLUSWSTKF-4" target="6b4MEqvbwc6XLUSWSTKF-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="6b4MEqvbwc6XLUSWSTKF-4" target="6b4MEqvbwc6XLUSWSTKF-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-4" value="gateway-svc" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://bobcares.com/wp-content/uploads/2024/03/Kubernetes-Logo.wine_.png;" parent="1" vertex="1">
+          <mxGeometry x="-200" y="21.34" width="83" height="55.33" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-5" value="auth-svc" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://bobcares.com/wp-content/uploads/2024/03/Kubernetes-Logo.wine_.png;" parent="1" vertex="1">
+          <mxGeometry x="-70" y="-124" width="83" height="55.33" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="6b4MEqvbwc6XLUSWSTKF-6" target="6b4MEqvbwc6XLUSWSTKF-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-6" value="notification-svc" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://bobcares.com/wp-content/uploads/2024/03/Kubernetes-Logo.wine_.png;" parent="1" vertex="1">
+          <mxGeometry x="-41" y="277" width="83" height="55.33" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" parent="1" source="6b4MEqvbwc6XLUSWSTKF-7" target="6b4MEqvbwc6XLUSWSTKF-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-7" value="mp3-svc" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://bobcares.com/wp-content/uploads/2024/03/Kubernetes-Logo.wine_.png;" parent="1" vertex="1">
+          <mxGeometry x="352" y="-116" width="83" height="55.33" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;" parent="1" source="6b4MEqvbwc6XLUSWSTKF-8" target="6b4MEqvbwc6XLUSWSTKF-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="91" y="232" />
+              <mxPoint x="1" y="232" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-8" value="queue" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="31" y="34" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-21" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.opc-router.de/wp-content/uploads/2021/03/mongodb_thumbnail.png;" parent="1" vertex="1">
+          <mxGeometry x="-66" y="137" width="41" height="55.15" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-24" value="video file" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn-icons-png.flaticon.com/512/1186/1186139.png;" parent="1" vertex="1">
+          <mxGeometry x="-317" y="55" width="33" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-25" value="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="-352" y="-172" width="21" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-30" value="User login, gets access_token" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-341" y="-176.5" width="207" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-32" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://images.ctfassets.net/2ntc334xpx65/6zvoTenoZoCMsgPxhETGQo/becf2e526c0e31a069439b27eaacc7b0/resource_thumb_44.jpg;clipPath=inset(12% 27.33% 18% 25.67%);" parent="1" vertex="1">
+          <mxGeometry x="-151" y="-169.94" width="17" height="16.88" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-33" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="-367" y="23.5" width="21" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-34" value="User uploads a video" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-344" y="19" width="104" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-35" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://images.ctfassets.net/2ntc334xpx65/6zvoTenoZoCMsgPxhETGQo/becf2e526c0e31a069439b27eaacc7b0/resource_thumb_44.jpg;clipPath=inset(12% 27.33% 18% 25.67%);" parent="1" vertex="1">
+          <mxGeometry x="-241" y="25.560000000000002" width="17" height="16.88" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-36" value="3" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="-200" y="-89.67" width="21" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-37" value="gateway-svc validates token" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-258" y="-65" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-42" value="4" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="-186.5" y="146" width="21" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="6b4MEqvbwc6XLUSWSTKF-43" value="gateway-svc stores video in mongodb" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-244.5" y="170.67" width="110" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
