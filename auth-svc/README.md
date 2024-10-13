@@ -51,7 +51,7 @@ MYSQL_PASSWORD=auth_pass
 DB_PORT=3306
 DB_HOST=db
 DATABASE_URL=mysql://${MYSQL_USER}:${MYSQL_PASSWORD}@${DB_HOST}:${DB_PORT}/auth
-JWT_SECRET=$your_custom_jwt_secret>
+JWT_SECRET=$your_custom_jwt_secret
 ```
 
 Make sure ${DB_HOST} is pointing to db (name of the mysql service in docker)

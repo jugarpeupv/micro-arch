@@ -3,7 +3,7 @@ services:
   auth-svc:
     image: auth-svc
     ports:
-      - 8080:8080
+      - 5000:5000
     environment:
       - DB_PORT=${DB_PORT}
       - DB_HOST=${DB_HOST}

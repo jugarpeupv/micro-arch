@@ -1,4 +1,4 @@
-@base = http://localhost:8080
+@base = http://localhost:5000
 
 # @env-json-key AUTH_TOKEN access_token
 POST {{base}}/auth/login

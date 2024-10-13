@@ -19,4 +19,7 @@ RUN cp ./target/release/$APP_NAME /bin/server
 FROM debian:bullseye-slim AS final
 COPY --from=build /bin/server /bin/
 RUN apt-get update && apt-get install -y curl make cmake gettext git
+
+EXPOSE 5000
+
 CMD ["/bin/server"]

@@ -16,8 +16,10 @@ async fn main() -> std::io::Result<()> {
     dotenv().ok();
     let db_url = env::var("DATABASE_URL").unwrap();
     let jwt_secret = env::var("JWT_SECRET").unwrap();
+    let port = 5000;
     println!("JWT Secret: {}", jwt_secret);
     println!("db_url: {}", db_url);
+    println!("port: {}", port);
     let sql_pool = MySqlPoolOptions::new()
         .max_connections(10)
         .connect(&db_url)
@@ -36,7 +38,7 @@ async fn main() -> std::io::Result<()> {
             .app_data(web::Data::new(app_state.clone()))
             .configure(handlers::config)
     })
-    .bind(("0.0.0.0", 8080))?
+    .bind(("0.0.0.0", port))?
     .system_exit()
     .run()
     .await
