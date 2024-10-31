@@ -1,6 +1,10 @@
-import os, json, pika, gridfs
+import json
+
 from flask import Flask, request
 from flask_pymongo import PyMongo
+import gridfs
+import pika
+
 from auth import validate
 from auth_svc import access
 from storage import util
@@ -17,6 +21,7 @@ fs = gridfs.GridFS(mongo.db)
 connection = pika.BlockingConnection(pika.ConnectionParameters("rabbitmq"))
 channel = connection.channel()
 
+
 @server.route("/login", methods=["POST"])
 def login():
     token, err = access.login(request)
@@ -24,6 +29,7 @@ def login():
         return token
     else:
         return err
+
 
 @server.route("/upload", methods=["POST"])
 def upload():
@@ -46,6 +52,7 @@ def upload():
 @server.route("/download", methods=["GET"])
 def download():
     pass
+
 
 if __name__ == "__main__":
     server.run(host="0.0.0.0", port=8080)

@@ -1,4 +1,7 @@
-import os, requests
+import os
+
+import requests
+
 
 def token(request):
     if not "Authorization" in request.headers:

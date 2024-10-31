@@ -1,4 +1,7 @@
-import os, requests
+import os
+
+import requests
+
 
 def login(request):
     auth = request.authorization

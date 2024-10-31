@@ -4,3 +4,5 @@ auth-svc/target
 auth-svc/volumes
 
 .env
+
+venv
