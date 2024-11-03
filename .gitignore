@@ -1,8 +1,7 @@
 node_modules
 
-auth-svc/target
-auth-svc/volumes
+target
+volumes
 
 .env
-
 venv

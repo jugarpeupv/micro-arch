@@ -1,5 +1,6 @@
 use std::env;
 use dotenv::dotenv;
+use std::time::Duration;
 
 use actix_web::{web, App, HttpServer};
 use sqlx::mysql::{MySqlPool, MySqlPoolOptions};
@@ -16,12 +17,13 @@ async fn main() -> std::io::Result<()> {
     dotenv().ok();
     let db_url = env::var("DATABASE_URL").unwrap();
     let jwt_secret = env::var("JWT_SECRET").unwrap();
-    let port = 5000;
+    let port = env::var("APP_PORT").unwrap().parse::<u16>().unwrap();
     println!("JWT Secret: {}", jwt_secret);
     println!("db_url: {}", db_url);
     println!("port: {}", port);
     let sql_pool = MySqlPoolOptions::new()
         .max_connections(10)
+        .idle_timeout(Duration::from_secs(3000))
         .connect(&db_url)
         .await
         .unwrap();

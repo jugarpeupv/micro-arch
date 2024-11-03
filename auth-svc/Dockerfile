@@ -3,6 +3,7 @@ FROM rust:1.80.0-slim-bullseye AS build
 # View app name in Cargo.toml
 ARG APP_NAME=auth-svc
 ENV SQLX_OFFLINE=true
+ENV APP_PORT=5000
 
 WORKDIR /build
 
@@ -20,6 +21,6 @@ FROM debian:bullseye-slim AS final
 COPY --from=build /bin/server /bin/
 RUN apt-get update && apt-get install -y curl make cmake gettext git
 
-EXPOSE 5000
+EXPOSE $APP_PORT
 
 CMD ["/bin/server"]

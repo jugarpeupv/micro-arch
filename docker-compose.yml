@@ -1,0 +1,51 @@
+services:
+  auth-svc:
+    build:
+      context: ./auth-svc
+      dockerfile: ./Dockerfile
+    depends_on:
+      - db
+    ports:
+      - 5004:5004
+    environment:
+      - APP_PORT=${APP_PORT}
+      - DATABASE_URL=${DATABASE_URL}
+      - JWT_SECRET=${JWT_SECRET}
+  gateway-svc:
+    build:
+      context: ./gateway-svc
+      dockerfile: ./Dockerfile
+    depends_on:
+      - db
+      - mongo
+    ports:
+      - 8080:8080
+    environment:
+      - AUTH_SVC_ADDRESS=${AUTH_SVC_ADDRESS}
+      - MONGO_URI=${MONGO_URI}
+
+  db:
+    image: mysql
+    ports:
+      - 3306:3306
+    restart: always
+    # healthcheck:
+    #   test: ["CMD", "mysql", "-u", "auth_user", "-pauth_pass", "--execute", "SHOW DATABASES;"]
+    #   interval: 3s
+    #   retries: 5
+    #   timeout: 10s
+    volumes:
+      - ./auth-svc/volumes/mysql/:/var/lib/mysql
+      - ./auth-svc/mysql-scripts:/docker-entrypoint-initdb.d
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+  rabbit:
+    image: rabbitmq:3-management
+    ports:
+      - 15672:15672
+    restart: always
+    volumes:
+      - ./rabbit/volumes/rabbit/:/var/lib/rabbitmq

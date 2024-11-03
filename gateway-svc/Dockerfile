@@ -1,5 +1,7 @@
 FROM python:3.10-slim-bullseye
 
+ENV MONGO_URI=mongodb://127.0.0.1:27017/videos
+
 RUN apt-get update \
   && apt-get install -y --no-install-recommends --no-install-suggests \
   build-essential \
