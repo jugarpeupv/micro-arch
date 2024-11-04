@@ -17,7 +17,8 @@ mongo = PyMongo(server)
 
 fs = gridfs.GridFS(mongo.db)
 # this rabbitmq string is referencing our rabbitmq host, resolved in kubernetes
-connection = pika.BlockingConnection(pika.ConnectionParameters("rabbitmq"))
+# connection = pika.BlockingConnection(pika.ConnectionParameters("rabbitmq"))
+connection = pika.BlockingConnection(pika.ConnectionParameters(host='rabbitmq'))
 channel = connection.channel()
 
 

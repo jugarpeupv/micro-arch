@@ -1,3 +1,4 @@
+name: micro-arch
 services:
   auth-svc:
     build:
@@ -16,24 +17,22 @@ services:
       context: ./gateway-svc
       dockerfile: ./Dockerfile
     depends_on:
-      - db
-      - mongo
+      db:
+        condition: service_started
+      mongo:
+        condition: service_started
+      rabbitmq:
+        condition: service_healthy
     ports:
       - 8080:8080
     environment:
       - AUTH_SVC_ADDRESS=${AUTH_SVC_ADDRESS}
       - MONGO_URI=${MONGO_URI}
-
   db:
     image: mysql
     ports:
       - 3306:3306
     restart: always
-    # healthcheck:
-    #   test: ["CMD", "mysql", "-u", "auth_user", "-pauth_pass", "--execute", "SHOW DATABASES;"]
-    #   interval: 3s
-    #   retries: 5
-    #   timeout: 10s
     volumes:
       - ./auth-svc/volumes/mysql/:/var/lib/mysql
       - ./auth-svc/mysql-scripts:/docker-entrypoint-initdb.d
@@ -42,10 +41,23 @@ services:
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-  rabbit:
+  rabbitmq:
     image: rabbitmq:3-management
     ports:
       - 15672:15672
     restart: always
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 30s
+      timeout: 30s
+      retries: 3
     volumes:
       - ./rabbit/volumes/rabbit/:/var/lib/rabbitmq
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}

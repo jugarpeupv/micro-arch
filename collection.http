@@ -1,0 +1,31 @@
+################################################################ auth-svc
+
+@auth_svc_base_url = http://localhost:{{APP_PORT}}
+
+# @env-json-key AUTH_TOKEN access_token
+POST {{auth_svc_base_url}}/auth/login
+Authorization: Basic {{USERNAME}} {{PASSWORD}}
+Content-Type: application/json
+
+###
+
+POST {{auth_svc_base_url}}/auth/validate
+Authorization: Bearer {{AUTH_TOKEN}}
+Content-Type: application/json
+
+
+
+################################################################ gateway-svc
+
+@gateway_svc_base_url = http://localhost:8080
+
+# @env-json-key AUTH_TOKEN access_token
+POST {{gateway_svc_base_url}}/login
+Authorization: Basic {{USERNAME}} {{PASSWORD}}
+Content-Type: application/json
+
+###
+
+POST {{gateway_svc_base_url}}/upload
+Authorization: Bearer {{AUTH_TOKEN}}
+Content-Type: application/json
