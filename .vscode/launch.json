@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python Debugger: Flask",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "flask",
+      "env": {
+        "FLASK_APP": "${workspaceFolder}/gateway-svc/server.py",
+        "FLASK_DEBUG": "1",
+        "MONGO_URI": "mongodb://127.0.0.1:27017/videos",
+        "AUTH_SVC_ADDRESS": "127.0.0.1:5004"
+      },
+      "args": [
+        "run",
+        "--port",
+        "8080",
+        "--no-debugger",
+        "--no-reload"
+      ],
+      "jinja": true,
+      "justMyCode": true
+    }
+  ]
+}

@@ -12,22 +12,22 @@ services:
       - APP_PORT=${APP_PORT}
       - DATABASE_URL=${DATABASE_URL}
       - JWT_SECRET=${JWT_SECRET}
-  gateway-svc:
-    build:
-      context: ./gateway-svc
-      dockerfile: ./Dockerfile
-    depends_on:
-      db:
-        condition: service_started
-      mongo:
-        condition: service_started
-      rabbitmq:
-        condition: service_healthy
-    ports:
-      - 8080:8080
-    environment:
-      - AUTH_SVC_ADDRESS=${AUTH_SVC_ADDRESS}
-      - MONGO_URI=${MONGO_URI}
+  # gateway-svc:
+  #   build:
+  #     context: ./gateway-svc
+  #     dockerfile: ./Dockerfile
+  #   depends_on:
+  #     db:
+  #       condition: service_started
+  #     mongo:
+  #       condition: service_started
+  #     rabbitmq:
+  #       condition: service_healthy
+  #   ports:
+  #     - 8080:8080
+  #   environment:
+  #     - AUTH_SVC_ADDRESS=${AUTH_SVC_ADDRESS}
+  #     - MONGO_URI=${MONGO_URI}
   db:
     image: mysql
     ports:
@@ -45,6 +45,7 @@ services:
     image: rabbitmq:3-management
     ports:
       - 15672:15672
+      - 5672:5672
     restart: always
     healthcheck:
       test: rabbitmq-diagnostics -q ping

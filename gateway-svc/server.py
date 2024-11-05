@@ -11,14 +11,14 @@ from auth_svc import access
 from storage import util
 
 server = Flask(__name__)
-server.config["MONGO_URI"] = os.environ.get('MONGO_URI')
+server.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 
 mongo = PyMongo(server)
 
 fs = gridfs.GridFS(mongo.db)
 # this rabbitmq string is referencing our rabbitmq host, resolved in kubernetes
 # connection = pika.BlockingConnection(pika.ConnectionParameters("rabbitmq"))
-connection = pika.BlockingConnection(pika.ConnectionParameters(host='rabbitmq'))
+connection = pika.BlockingConnection(pika.ConnectionParameters(host="127.0.0.1"))
 channel = connection.channel()
 
 
@@ -55,4 +55,7 @@ def download():
 
 
 if __name__ == "__main__":
-    server.run(host="0.0.0.0", port=8080)
+    server.run(
+        host="0.0.0.0",
+        port=8080,
+    )
