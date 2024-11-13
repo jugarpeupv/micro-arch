@@ -12,6 +12,7 @@
         "MONGO_URI": "mongodb://127.0.0.1:27017/videos",
         "AUTH_SVC_ADDRESS": "127.0.0.1:5004"
       },
+      "console": "integratedTerminal",
       "args": [
         "run",
         "--port",

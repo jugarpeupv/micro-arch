@@ -83,6 +83,8 @@ impl FromRequest for BearerAuthHeader {
 struct Claims {
     sub: String,
     exp: usize,
+    iat: usize,
+    admin: Option<bool>,
 }
 
 #[derive(Serialize)]
@@ -122,12 +124,14 @@ async fn login(auth_header: BasicAuthHeader, app_state: web::Data<AppState>) -> 
                 let my_claims = Claims {
                     sub: user.email.clone(),
                     exp: Utc::now().timestamp() as usize + Duration::days(1).num_seconds() as usize,
+                    iat: Utc::now().timestamp() as usize,
+                    admin: Some(true),
                 };
                 println!("[User Authenticated] Claims: {:?}", my_claims);
                 let token = encode(
                     &Header::default(),
                     &my_claims,
-                    &EncodingKey::from_secret(app_state.jwt_secret.as_ref())
+                    &EncodingKey::from_secret(app_state.jwt_secret.as_ref()),
                 )
                 .unwrap();
 
@@ -148,23 +152,29 @@ async fn login(auth_header: BasicAuthHeader, app_state: web::Data<AppState>) -> 
 }
 
 #[post("/validate")]
-async fn validate_token(token: BearerAuthHeader, app_state: web::Data<AppState>) -> impl Responder {
-    println!("[/validate] access_token: {}", token.token);
+async fn validate_token(
+    bearer: BearerAuthHeader,
+    app_state: web::Data<AppState>,
+) -> impl Responder {
+    println!("[/validate] access_token: {}", bearer.token);
 
     let decoded_token = decode::<Claims>(
-        &token.token,
+        &bearer.token,
         &DecodingKey::from_secret(app_state.jwt_secret.as_ref()),
         &Validation::default(),
     );
 
     match decoded_token {
-        Ok(_) => {
+        Ok(decoded) => {
             println!("[/validate] Token is valid");
-            HttpResponse::Ok()
+            let claims = serde_json::to_string(&decoded.claims).unwrap();
+            return HttpResponse::Ok()
+                .content_type(ContentType::json())
+                .body(claims)
         }
         Err(err) => {
             println!("[/validate] Token is invalid: {:?}", err);
-            return HttpResponse::Unauthorized();
+            return HttpResponse::Unauthorized().finish();
         }
     }
 }

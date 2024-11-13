@@ -19,6 +19,7 @@ Content-Type: application/json
 
 @gateway_svc_base_url = http://localhost:8080
 
+# @env-json-key AUTH_TOKEN_GW access_token
 POST {{gateway_svc_base_url}}/login
 Authorization: Basic {{MYSQL_TEST_USERNAME}} {{MYSQL_TEST_PASSWORD}}
 Content-Type: application/json
@@ -27,7 +28,7 @@ Content-Type: application/json
 
 # @file-to-variable LOGO_FILE_VAR ./../../logo.png binary
 POST {{gateway_svc_base_url}}/upload
-Authorization: Bearer {{AUTH_TOKEN}}
+Authorization: Bearer {{AUTH_TOKEN_GW}}
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary{{$timestamp}}
 ------WebKitFormBoundary{{$timestamp}}
 Content-Disposition: form-data; name="logo"; filename="logo.png"
