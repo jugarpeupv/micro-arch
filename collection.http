@@ -24,14 +24,16 @@ POST {{gateway_svc_base_url}}/login
 Authorization: Basic {{MYSQL_TEST_USERNAME}} {{MYSQL_TEST_PASSWORD}}
 Content-Type: application/json
 
-###
 
-# @file-to-variable LOGO_FILE_VAR ./../../logo.png binary
-POST {{gateway_svc_base_url}}/upload
+###
+POST {{gateway_svc_base_url}}/upload HTTP/1.1
 Authorization: Bearer {{AUTH_TOKEN_GW}}
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary{{$timestamp}}
+
 ------WebKitFormBoundary{{$timestamp}}
-Content-Disposition: form-data; name="logo"; filename="logo.png"
-Content-Type: image/jpeg
-{{LOGO_FILE_VAR}}
+Content-Disposition: form-data; name="test_file"; filename="test-neovim.mp4"
+Content-Type: video/mp4
+
+< /Users/jgarcia/Documents/programacion/test-neovim.mp4
+
 ------WebKitFormBoundary{{$timestamp}}--

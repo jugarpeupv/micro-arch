@@ -8,8 +8,8 @@ The architecture is implemented using the following technologies `kubernetes`, `
 | Service            | Language |
 |--------------------|----------|
 | auth-svc           | Rust     |
-| gateway-svc        | Node     |
-| mp3-svc            | Python   |
+| gateway-svc        | Python   |
+| mp3-svc            | Java     |
 | notification-svc   | Rust     |
 
 

@@ -6,7 +6,8 @@ import pika
 def upload(f, fs, channel, access):
     try:
         fid = fs.put(f)
-    except Exception:
+    except Exception as e:
+        print(e)
         return "internal server error", 500
 
     message = {
