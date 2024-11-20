@@ -34,6 +34,6 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundary{{$timestamp}}
 Content-Disposition: form-data; name="test_file"; filename="test-neovim.mp4"
 Content-Type: video/mp4
 
-< /Users/jgarcia/Documents/programacion/test-neovim.mp4
+< {{ TEST_FILE }}
 
 ------WebKitFormBoundary{{$timestamp}}--

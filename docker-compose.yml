@@ -53,12 +53,22 @@ services:
       timeout: 30s
       retries: 3
     volumes:
-      - ./rabbit/volumes/rabbit/:/var/lib/rabbitmq
+      - ./rabbit/volumes/rabbit:/var/lib/rabbitmq
+      - ./rabbit/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
+      - ./rabbit/definitions.json:/etc/rabbitmq/definitions.json:ro
   mongo:
     image: mongo
     restart: always
     ports:
       - 27017:27017
+  mongo-client:
+    image: mongoclient/mongoclient
+    platform: linux/amd64
+    ports:
+      - 3000:3000
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
-      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+      - MONGO_URL=${MONGO_URI}
+    volumes:
+      - ./gateway-svc/mongo/volumes/:/data/db
+    depends_on:
+      - mongo

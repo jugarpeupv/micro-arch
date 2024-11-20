@@ -13,7 +13,7 @@ def upload(f, fs, channel, access):
     message = {
         "video_id": str(fid),
         "mp3_fid": None,
-        "username": access["username"],
+        "username": access["sub"],
     }
 
     try:
@@ -22,10 +22,11 @@ def upload(f, fs, channel, access):
             routing_key="video",
             body=json.dumps(message),
             properties=pika.BasicProperties(
-                delivery_mode=pika.__spec__.PERSISTENT_DELIVERY_MODE
+                delivery_mode=pika.spec.PERSISTENT_DELIVERY_MODE
             ),
         )
         return None
-    except:
+    except Exception as e:
+        print(e)
         fs.delete(fid)
         return "internal server error", 500

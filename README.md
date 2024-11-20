@@ -14,7 +14,6 @@ The architecture is implemented using the following technologies `kubernetes`, `
 
 
 
-
 ## Develop (docker-compose)
 
 1. Create `.env` at the root of the project
