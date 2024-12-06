@@ -1,10 +1,9 @@
-
 package com.micro_arch.mp3_svc.util;
 
 import ws.schild.jave.encode.AudioAttributes;
+import ws.schild.jave.encode.EncodingAttributes;
 import ws.schild.jave.Encoder;
 import ws.schild.jave.EncoderException;
-import ws.schild.jave.encode.EncodingAttributes;
 import ws.schild.jave.MultimediaObject;
 
 import java.io.File;

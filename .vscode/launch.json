@@ -22,6 +22,13 @@
       ],
       "jinja": true,
       "justMyCode": true
+    },
+    {
+      "type": "java",
+      "request": "attach",
+      "name": "Attach to spring boot mp3-svc",
+      "hostName": "localhost",
+      "port": "8000"
     }
   ]
 }

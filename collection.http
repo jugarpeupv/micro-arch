@@ -34,6 +34,34 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundary{{$timestamp}}
 Content-Disposition: form-data; name="test_file"; filename="test-neovim.mp4"
 Content-Type: video/mp4
 
-< {{ TEST_FILE }}
+< {{TEST_FILE}}
 
 ------WebKitFormBoundary{{$timestamp}}--
+
+
+
+###
+POST http://localhost:8080/upload
+Authorization: Bearer {{AUTH_TOKEN_GW}}
+file=!file(/Users/jgarcia/Documents/programacion/test-neovim.mp4)
+
+
+################################################################ mp3-svc
+@mp3_svc_base_url = http://localhost:8000/api
+
+
+###
+POST http://localhost:8000/api/convert
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary01
+
+------WebKitFormBoundary01
+Content-Disposition: form-data; name="file"; filename="test-neovim.mp4"
+
+< /Users/jgarcia/Documents/programacion/test-neovim.mp4
+
+------WebKitFormBoundary01--
+
+
+###
+POST http://localhost:8000/api/convert
+file=!file(/Users/jgarcia/Documents/programacion/test-neovim.mp4)

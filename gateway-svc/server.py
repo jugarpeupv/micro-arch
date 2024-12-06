@@ -1,7 +1,7 @@
 import json
 import os
 
-from flask import Flask, request
+from flask import Flask, request, make_response
 from flask_pymongo import PyMongo
 import gridfs
 import pika
@@ -17,19 +17,20 @@ mongo = PyMongo(server)
 
 fs = gridfs.GridFS(mongo.db)
 # this rabbitmq string is referencing our rabbitmq host, resolved in kubernetes
-# connection = pika.BlockingConnection(pika.ConnectionParameters("rabbitmq"))
-connection = pika.BlockingConnection(pika.ConnectionParameters(host="127.0.0.1"))
+connection = pika.BlockingConnection(pika.ConnectionParameters(host=os.environ.get('RABBITMQ_SVC_NAME') or 'localhost'))
 channel = connection.channel()
 
 
 @server.route("/login", methods=["POST"])
 def login():
     token, err = access.login(request)
+    response = make_response()
     if not err:
-        return token
+        response = make_response(token, 200)
     else:
         return err
-
+    response.headers["Content-Type"] = "application/json"
+    return response
 
 @server.route("/upload", methods=["POST"])
 def upload():

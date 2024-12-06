@@ -12,22 +12,23 @@ services:
       - APP_PORT=${APP_PORT}
       - DATABASE_URL=${DATABASE_URL}
       - JWT_SECRET=${JWT_SECRET}
-  # gateway-svc:
-  #   build:
-  #     context: ./gateway-svc
-  #     dockerfile: ./Dockerfile
-  #   depends_on:
-  #     db:
-  #       condition: service_started
-  #     mongo:
-  #       condition: service_started
-  #     rabbitmq:
-  #       condition: service_healthy
-  #   ports:
-  #     - 8080:8080
-  #   environment:
-  #     - AUTH_SVC_ADDRESS=${AUTH_SVC_ADDRESS}
-  #     - MONGO_URI=${MONGO_URI}
+  gateway-svc:
+    build:
+      context: ./gateway-svc
+      dockerfile: ./Dockerfile
+    depends_on:
+      db:
+        condition: service_started
+      mongo:
+        condition: service_started
+      rabbitmq:
+        condition: service_healthy
+    ports:
+      - 8080:8080
+    environment:
+      - AUTH_SVC_ADDRESS=${AUTH_SVC_ADDRESS}
+      - MONGO_URI=${MONGO_URI}
+      - RABBITMQ_SVC_NAME=${RABBITMQ_SVC_NAME}
   db:
     image: mysql
     ports:
@@ -72,3 +73,9 @@ services:
       - ./gateway-svc/mongo/volumes/:/data/db
     depends_on:
       - mongo
+  # mp3-svc:
+  #   build:
+  #     context: ./mp3-svc
+  #     dockerfile: ./Dockerfile
+  #   ports:
+  #     - 8000:8000
