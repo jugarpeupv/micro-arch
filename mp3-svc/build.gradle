@@ -25,12 +25,11 @@ repositories {
 
 dependencies {
   implementation 'org.springframework.boot:spring-boot-starter'
-  implementation 'ws.schild:jave-all-deps:3.5.0'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-  implementation 'org.springframework.boot:spring-boot-starter-amqp'
-  //implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
-  //implementation 'org.springframework.boot:spring-boot-loader-tools'
+  implementation 'org.springframework.boot:spring-boot-starter-web'
   implementation "me.paulschwarz:spring-dotenv:4.0.0"
+  implementation 'ws.schild:jave-all-deps:3.5.0'
+  implementation 'org.mongodb:mongodb-driver-sync:5.2.1'
+  implementation 'org.springframework.amqp:spring-rabbit:3.2.0'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
@@ -42,12 +41,12 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
-//bootRun {
-//  debugOptions {
-//    enabled = true
-//    port = 8000
-//    server = true
-//    suspend = false
-//  }
-//}
+bootRun {
+  debugOptions {
+    enabled = true
+    port = 8000
+    server = true
+    suspend = false
+  }
+}
 
