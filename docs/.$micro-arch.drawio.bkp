@@ -1,6 +1,6 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
   <diagram name="Page-1" id="r_ViiPEViYEwGBntmVDa">
-    <mxGraphModel dx="2274" dy="1238" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2294" dy="1258" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -33,7 +33,7 @@
         <mxCell id="6b4MEqvbwc6XLUSWSTKF-4" value="gateway-svc" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://bobcares.com/wp-content/uploads/2024/03/Kubernetes-Logo.wine_.png;" parent="1" vertex="1">
           <mxGeometry x="-200" y="21.34" width="83" height="55.33" as="geometry" />
         </mxCell>
-        <mxCell id="kV-Oe0UcgvZgLTsr31BF-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6b4MEqvbwc6XLUSWSTKF-5" target="kV-Oe0UcgvZgLTsr31BF-5">
+        <mxCell id="kV-Oe0UcgvZgLTsr31BF-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="6b4MEqvbwc6XLUSWSTKF-5" target="kV-Oe0UcgvZgLTsr31BF-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="6b4MEqvbwc6XLUSWSTKF-5" value="auth-svc" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://bobcares.com/wp-content/uploads/2024/03/Kubernetes-Logo.wine_.png;" parent="1" vertex="1">
@@ -178,14 +178,32 @@
         <mxCell id="6b4MEqvbwc6XLUSWSTKF-83" value="User uses mp3 unique ID and access_token to download the mp3" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-355" y="154" width="133" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="kV-Oe0UcgvZgLTsr31BF-5" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://blog.hostingdunyam.com.tr/wp-content/uploads/2018/04/sql-dosyasi-nasil-yuklenir.jpg;clipPath=inset(5.85% 24.67% 7.98% 21.33%);" vertex="1" parent="1">
+        <mxCell id="kV-Oe0UcgvZgLTsr31BF-5" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://blog.hostingdunyam.com.tr/wp-content/uploads/2018/04/sql-dosyasi-nasil-yuklenir.jpg;clipPath=inset(5.85% 24.67% 7.98% 21.33%);" parent="1" vertex="1">
           <mxGeometry x="33" y="-192" width="52.25" height="52.25" as="geometry" />
         </mxCell>
-        <mxCell id="kV-Oe0UcgvZgLTsr31BF-7" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+        <mxCell id="kV-Oe0UcgvZgLTsr31BF-7" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="-99" y="-200" width="21" height="21" as="geometry" />
         </mxCell>
-        <mxCell id="kV-Oe0UcgvZgLTsr31BF-8" value="auth-svc checks if user exists on mysql" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="kV-Oe0UcgvZgLTsr31BF-8" value="auth-svc checks if user exists on mysql" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-76" y="-203.5" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9Hj6a1X7noCaEEP2l2S1-2" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Rustacean-orig-noshadow.svg/512px-Rustacean-orig-noshadow.svg.png;" vertex="1" parent="1">
+          <mxGeometry x="4" y="-68.66999999999999" width="38" height="25.31" as="geometry" />
+        </mxCell>
+        <mxCell id="9Hj6a1X7noCaEEP2l2S1-3" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.svgrepo.com/show/376344/python.svg;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="64" width="52" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="9Hj6a1X7noCaEEP2l2S1-4" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.manualweb.net/img/logos/java.png;" vertex="1" parent="1">
+          <mxGeometry x="369" y="-35" width="32" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="9Hj6a1X7noCaEEP2l2S1-6" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.armadilloamarillo.com/wp-content/uploads/spring-boot-ok.png;" vertex="1" parent="1">
+          <mxGeometry x="385" y="-29" width="52" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="9Hj6a1X7noCaEEP2l2S1-7" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.campusmvp.es/recursos/image.axd?picture=NodeJS-Logo-Transp.png;" vertex="1" parent="1">
+          <mxGeometry x="-23" y="354" width="70" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="9Hj6a1X7noCaEEP2l2S1-8" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.svgrepo.com/show/374144/typescript.svg;" vertex="1" parent="1">
+          <mxGeometry x="-39" y="361" width="18" height="18" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
