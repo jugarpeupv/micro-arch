@@ -26,10 +26,4 @@ auth_token_gw: jsonpath "$['access_token']"
 POST http://localhost:8080/upload
 Authorization: Bearer {{auth_token_gw}}
 [MultipartFormData]
-file: file,test-neovim.mp4; video/mp4
-
-
-################################################################ mp3 svc
-POST http://localhost:8000/api/convert
-[MultipartFormData]
-file: file,test-neovim.mp4; video/mp4
+file: file,mongo/test-neovim.mp4; video/mp4
