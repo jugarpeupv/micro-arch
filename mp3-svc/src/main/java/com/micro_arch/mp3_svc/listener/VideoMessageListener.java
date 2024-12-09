@@ -8,6 +8,8 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.gridfs.GridFSBucket;
 import com.mongodb.client.gridfs.GridFSBuckets;
 import com.mongodb.client.gridfs.GridFSDownloadStream;
+import com.mongodb.client.gridfs.GridFSUploadStream;
+
 import org.bson.types.ObjectId;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,6 +17,7 @@ import org.springframework.stereotype.Component;
 import ws.schild.jave.EncoderException;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -56,15 +59,21 @@ public class VideoMessageListener {
         File tempMp3File = File.createTempFile("tempMp3_", ".mp3");
         Mp4ToMp3Converter.convertMp4ToMp3(tempMp4File, tempMp3File);
 
-        // Define the path to save the MP3 file in the root of the project
-        String projectRoot = System.getProperty("user.dir");
-        File outputMp3File = new File(projectRoot, videoMessage.getVideo_id() + ".mp3");
+        // Upload the MP3 file to MongoDB using GridFS
+        try (FileInputStream mp3InputStream = new FileInputStream(tempMp3File)) {
+          GridFSUploadStream uploadStream = gridFSBucket
+              .openUploadStream(videoMessage.getVideo_id() + ".mp3");
+          byte[] buffer = new byte[1024];
+          int bytesRead;
+          while ((bytesRead = mp3InputStream.read(buffer)) != -1) {
+            uploadStream.write(buffer, 0, bytesRead);
+          }
+          uploadStream.close();
 
-        // Move the temporary MP3 file to the desired location
-        if (tempMp3File.renameTo(outputMp3File)) {
-          System.out.println("MP3 file saved to: " + outputMp3File.getAbsolutePath());
-        } else {
-          System.err.println("Failed to save MP3 file to: " + outputMp3File.getAbsolutePath());
+          // Update the mp3_fid field in the VideoMessage object
+          videoMessage.setMp3_fid(uploadStream.getObjectId().toHexString());
+
+          System.out.println("MP3 file uploaded to GridFS with ID: " + videoMessage.getMp3_fid());
         }
 
         // Clean up temporary files
