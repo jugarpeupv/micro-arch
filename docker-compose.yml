@@ -62,9 +62,11 @@ services:
     restart: always
     ports:
       - 27017:27017
-  # mp3-svc:
-  #   build:
-  #     context: ./mp3-svc
-  #     dockerfile: ./Dockerfile
-  #   ports:
-  #     - 8000:8000
+  mp3-svc:
+    build:
+      context: ./mp3-svc
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod

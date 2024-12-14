@@ -50,6 +50,8 @@ MONGO_INITDB_ROOT_USERNAME=root
 MONGO_INITDB_ROOT_PASSWORD=example
 
 ########### rabbitmq
+RABBITMQ_SVC_NAME=rabbitmq
+RABBITMQ_PORT=5672
 ```
 
 

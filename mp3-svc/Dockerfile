@@ -26,7 +26,7 @@ FROM eclipse-temurin:23-jdk AS runtime
 WORKDIR /app
 
 # Copy the built jar file from the build stage
-COPY --from=build /app/build/libs/mp3-svc-0.0.1-SNAPSHOT.jar /app/mp3-svc.jar
+COPY --from=build /app/build/libs/*.jar /app/mp3-svc.jar
 
 # Expose the port the application runs on
 EXPOSE 8000
