@@ -29,6 +29,20 @@
       "name": "Attach to spring boot mp3-svc",
       "hostName": "localhost",
       "port": "8000"
+    },
+    {
+      "name": "Notification Service - Run code",
+      "type": "node",
+      "request": "launch",
+      "preLaunchTask": "create-mar-workspace:pretask",
+      "outFiles": [
+        "${workspaceFolder}/notification-svc/dist/**/*.js"
+      ],
+      "program": "${workspaceFolder}/dist/index.js",
+      "cwd": "${workspaceFolder}/notification-svc",
+      "sourceMaps": true,
+      "protocol": "inspector",
+      "console": "integratedTerminal"
     }
   ]
 }
