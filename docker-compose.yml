@@ -62,16 +62,40 @@ services:
     restart: always
     ports:
       - 27017:27017
-  # mp3-svc:
-  #   build:
-  #     context: ./mp3-svc
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - "8000:8000"
-  #   depends_on:
-  #     mongo:
-  #       condition: service_started
-  #     rabbitmq:
-  #       condition: service_healthy
-  #   environment:
-  #     - SPRING_PROFILES_ACTIVE=prod
+  mp3-svc:
+    build:
+      context: ./mp3-svc
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    depends_on:
+      mongo:
+        condition: service_started
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - RABBITMQ_SVC_NAME=${RABBITMQ_SVC_NAME}
+      - RABBITMQ_PORT=${RABBITMQ_PORT}
+      - RABBITMQ_USER=${RABBITMQ_USER}
+      - RABBITMQ_PASSWORD=${RABBITMQ_PASSWORD}
+      - MONGO_URI=${MONGO_URI}
+      - MONGO_DB_NAME=${MONGO_DB_NAME}
+  notification-svc:
+    build:
+      context: ./notification-svc
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      mongo:
+        condition: service_started
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASS=${SMTP_PASS}
+      - RABBITMQ_USER=${RABBITMQ_USER}
+      - RABBITMQ_PASSWORD=${RABBITMQ_PASSWORD}
+      - RABBITMQ_HOST=${RABBITMQ_HOST}
+      - RABBITMQ_PORT=${RABBITMQ_PORT}

@@ -1,5 +1,5 @@
 # Stage 1: Build the application
-FROM gradle:8.11-jdk AS build
+FROM gradle:8.11-jdk17 AS build
 
 # Set the working directory
 WORKDIR /app
@@ -20,7 +20,7 @@ RUN chmod +x gradlew
 RUN ./gradlew build --no-daemon
 
 # Stage 2: Create the runtime image
-FROM eclipse-temurin:23-jdk AS runtime
+FROM eclipse-temurin:17-jdk AS runtime
 
 # Set the working directory
 WORKDIR /app

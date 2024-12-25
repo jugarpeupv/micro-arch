@@ -2,20 +2,23 @@ import * as nodemailer from "nodemailer";
 import * as dotenv from "dotenv";
 import { Connection } from "rabbitmq-client";
 
-dotenv.config();
+dotenv.config({ path: "../../.env" });
 
 const transporter = nodemailer.createTransport({
   host: "live.smtp.mailtrap.io",
   port: 587,
   auth: {
-    user: process.env.SMPT_USER,
-    pass: process.env.SMPT_PASS,
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
   },
 });
 
-const rabbit = new Connection(
-  `amqp://${process.env.RABBITMQ_USER}:${process.env.RABBITMQ_PASSWORD}@localhost:${process.env.RABBITMQ_PORT}`,
-);
+const rabbitMqUrl = `amqp://${process.env.RABBITMQ_USER}:${process.env.RABBITMQ_PASSWORD}@${process.env.RABBITMQ_HOST}:${process.env.RABBITMQ_PORT}`;
+
+// TODO: Remove this console.log
+console.log("rabbitMqUrl: ", rabbitMqUrl);
+
+const rabbit = new Connection(rabbitMqUrl);
 
 rabbit.on("error", (err) => {
   console.log("RabbitMQ connection error", err);
@@ -28,6 +31,7 @@ rabbit.on("connection", () => {
 const sub = rabbit.createConsumer(
   {
     queue: "mp3",
+    queueOptions: { durable: true },
   },
   async (msg) => {
     console.log("received message (user-events)", msg);
@@ -41,7 +45,7 @@ const sub = rabbit.createConsumer(
       {
         from: "hello@demomailtrap.com",
         to: "testmail200087@gmail.com",
-        subject: "Message 6",
+        subject: "Your MP3 file is ready!",
         text: "I hope this message gets buffered!",
       },
       (_, info) => {

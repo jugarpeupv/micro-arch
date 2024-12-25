@@ -2,7 +2,7 @@
 
 The architecture is implemented using the following technologies `kubernetes`, `mysql`, `mongodb`, `actix-web`, `jwt`, `python`, `node`, `rabbitmq`
 
-![](./docs/img/arch_summary.png)
+![Summary](./docs/img/arch_summary.png)
 
 
 | Service            | Language |
