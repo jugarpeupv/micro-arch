@@ -18,9 +18,6 @@ async fn main() -> std::io::Result<()> {
     let db_url = env::var("DATABASE_URL").unwrap();
     let jwt_secret = env::var("JWT_SECRET").unwrap();
     let port = env::var("APP_PORT").unwrap().parse::<u16>().unwrap();
-    println!("JWT Secret: {}", jwt_secret);
-    println!("db_url: {}", db_url);
-    println!("port: {}", port);
     let sql_pool = MySqlPoolOptions::new()
         .max_connections(10)
         .idle_timeout(Duration::from_secs(3000))
@@ -28,7 +25,6 @@ async fn main() -> std::io::Result<()> {
         .await
         .unwrap();
     println!("Connected to MySQL!");
-    println!("sql_pool: {:?}", sql_pool);
 
     let app_state = AppState {
         jwt_secret,
