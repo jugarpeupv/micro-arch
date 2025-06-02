@@ -1,5 +1,7 @@
 # Architecture
 
+$\color{red}{lorem ipsum}$
+
 The architecture is implemented using the following technologies `kubernetes`, `mysql`, `mongodb`, `actix-web`, `jwt`, `python`, `node`, `rabbitmq`
 
 ![Summary](./docs/img/arch_summary.png)

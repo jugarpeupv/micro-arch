@@ -15,9 +15,6 @@ const transporter = nodemailer.createTransport({
 
 const rabbitMqUrl = `amqp://${process.env.RABBITMQ_USER}:${process.env.RABBITMQ_PASSWORD}@${process.env.RABBITMQ_HOST}:${process.env.RABBITMQ_PORT}`;
 
-// TODO: Remove this console.log
-console.log("rabbitMqUrl: ", rabbitMqUrl);
-
 const rabbit = new Connection(rabbitMqUrl);
 
 rabbit.on("error", (err) => {
@@ -35,30 +32,23 @@ const sub = rabbit.createConsumer(
   },
   async (msg) => {
     console.log("received message (user-events)", msg);
-    // The message is automatically acknowledged (BasicAck) when this function ends.
-    // If this function throws an error, then msg is rejected (BasicNack) and
-    // possibly requeued or sent to a dead-letter exchange. You can also return a
-    // status code from this callback to control the ack/nack behavior
-    // per-message.
+    console.log("msg body", msg.body.toString());
 
     transporter.sendMail(
       {
         from: "hello@demomailtrap.com",
         to: "testmail200087@gmail.com",
-        subject: "Your MP3 file is ready!",
-        text: "I hope this message gets buffered!",
+        subject: `Your MP3 file is ready! Mp3Id: ${msg.body.toString()}`,
+        text: "I hope this message gets buffered! Your mp3 file is ready! This is the id of your mp3 file: " + msg.body.toString(),
       },
       (_, info) => {
-        console.log(info.envelope);
-        console.log(info.messageId);
-        console.log(info.messageId.toString());
+        console.log("info.envelope", info.envelope);
+        console.log("info.messageId",info.messageId);
       },
     );
   },
 );
 
 sub.on("error", (err) => {
-  // Maybe the consumer was cancelled, or the connection was reset before a
-  // message could be acknowledged.
   console.log("consumer error (user-events)", err);
 });

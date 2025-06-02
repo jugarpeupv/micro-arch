@@ -38,7 +38,7 @@ public class VideoMessageListener {
       System.out.println("Parsed message: " + videoMessage.getVideo_id() + ", " + videoMessage.getMp3_fid() + ", "
           + videoMessage.getUsername());
 
-      // Download mp3 file from MongoDB using GridFS
+      // Download mp4 file from MongoDB using GridFS
       ObjectId fileId = new ObjectId(videoMessage.getVideo_id());
       File tempMp4File = File.createTempFile("tempMp4_", ".mp4");
       this.mongoDBService.streamDownloadIntoTempFile(fileId, tempMp4File);
@@ -47,7 +47,7 @@ public class VideoMessageListener {
       File tempMp3File = File.createTempFile("tempMp3_", ".mp3");
       Mp4ToMp3Converter.convertMp4ToMp3(tempMp4File, tempMp3File);
 
-      // Upload the MP3 file to MongoDB using GridFS
+      // Upload the MP3 file to MongoDB
       String fileName = videoMessage.getVideo_id() + ".mp3";
       Optional<String> result = this.mongoDBService.uploadFile(tempMp3File, fileName);
       result.ifPresentOrElse(
