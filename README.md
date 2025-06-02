@@ -1,67 +1,49 @@
-# Architecture
+# Framework de Desarrollo
 
-The architecture is implemented using the following technologies `kubernetes`, `mysql`, `mongodb`, `actix-web`, `jwt`, `python`, `node`, `rabbitmq`
+## Propósito
+Definir las herramientas y tecnologías utilizadas en el desarrollo de arquetipos frontend
 
-![Summary](./docs/img/arch_summary.png)
-
-
-| Service            | Language |
-|--------------------|----------|
-| auth-svc           | Rust     |
-| gateway-svc        | Python   |
-| mp3-svc            | Java     |
-| notification-svc   | Node     |
+## Contenido esperado:
+- **Librerías y frameworks utilizados**.
+- **Estándares de desarrollo y mejores prácticas**.
+- **Guías para contribuir al código**.
 
 
+# Configuración inicial proyecto
 
-## Develop (docker-compose)
+## Capacitor
 
-1. Create `.env` at the root of the project
+### Configuración de secretos
 
-```sh
-AUTH_SVC_NAME=auth-svc
-DB_SVC_NAME=db
-MONGO_SVC_NAME=mongo
+- A día de hoy los secretos será necesario darlos de alta a nivel del repositorio. Esto puede que cambie más adelante, ya que se espera que se defina una nueva herramienta para la gestión de secretos validada por la DISMA
+- Los secretos marcados con colores significa que tan solo sería necesario setear el grupo correspondiente de ellos, dependiendo de la cuenta de Apple/Google donde se vaya a publicar la aplicación
 
-
-########### auth-scv
-# mysql
-MYSQL_ROOT_PASSWORD=****
-MYSQL_DATABASE=auth
-MYSQL_USER=****
-MYSQL_PASSWORD=****
-
-MYSQL_TEST_USERNAME=****
-MYSQL_TEST_PASSWORD=****
-
-# app
-DB_PORT=3306
-DB_HOST=${DB_SVC_NAME}
-APP_PORT=5004
-DATABASE_URL=mysql://${MYSQL_USER}:${MYSQL_PASSWORD}@${DB_HOST}:${DB_PORT}/${MYSQL_DATABASE}
-JWT_SECRET=****
-
-
-########### gateway-scv
-AUTH_SVC_ADDRESS=${AUTH_SVC_NAME}:${APP_PORT}
-MONGO_URI=mongodb://${MONGO_SVC_NAME}:27017/videos
-
-
-########### rabbitmq
-RABBITMQ_SVC_NAME=rabbitmq
-RABBITMQ_PORT=5672
-RABBITMQ_USER=guest
-RABBITMQ_PASSWORD=guest
-
-
-########### EMAIL SMPT
-SMPT_USER=*****
-SMPT_PASS=*****
-```
-
-
-2. Run `docker-compose` command
-
-```sh
-docker-compose up -d
-```
+| Nombre                                                                                 | Tipo   | Scope     | Nivel        | Scope     | Necesario crear secreto?  | Value                              |
+|----------------------------------------------------------------------------------------|--------|-----------|--------------|-----------|---------------------------|------------------------------------|
+| AZURE_ARTIFACTS_PW                                                                     | Secret | common    | Organización | common    | NO                        | ${{ secrets.AZURE_ARTIFACTS_PW }}  |
+| ACR_TOKEN_USER                                                                         | Secret | common    | Organización | common    | NO                        | ${{ secrets.ACR_TOKEN_USER }}      |
+| ACR_TOKEN_PW                                                                           | Secret | common    | Organización | common    | NO                        | ${{ secrets.ACR_TOKEN_PW }}        |
+| SONAR_TOKEN                                                                            | Secret | common    | Proyecto*    | common    | SI                        |                                    |
+| SONAR_ROOT_CERT                                                                        | Secret | common    | Proyecto*    | common    | SI                        |                                    |
+| RAM_GITHUB_GIT_TOKEN                                                                   | Secret | common    | Proyecto*    | common    | SI                        |                                    |
+| FIREBASE_TOKEN                                                                         | Secret | common    | Proyecto*    | common    | SI (si se usa capacitor)  |                                    |
+| MATCH_PASSWORD                                                                         | Secret | ios       | Proyecto*    | ios       | SI (si se usa capacitor)  |                                    |
+| MATCH_GIT_BASIC_AUTHORIZATION                                                          | Secret | ios       | Proyecto*    | ios       | SI (si se usa capacitor)  |                                    |
+| <span style="color:#F2CDCD">DIGITALHEALTH_APP_STORE_KEY_ID</span>                      | Secret | ios       | Proyecto*    | ios       | SI (si se usa capacitor)  |                                    |
+| <span style="color:#F2CDCD">DIGITALHEALTH_APP_STORE_ISSUER_ID</span>                   | Secret | ios       | Proyecto*    | ios       | SI (si se usa capacitor)  |                                    |
+| <span style="color:#F2CDCD">DIGITALHEALTH_APP_STORE_ADMIN_API_KEY_P8</span>            | Secret | ios       | Proyecto*    | ios       | SI (si se usa capacitor)  |                                    |
+| <span style="color:#F2CDCD">MAPFRE_ESP_APP_STORE_KEY_ID</span>                         | Secret | ios       | Proyecto*    | ios       | SI (si se usa capacitor)  |                                    |
+| <span style="color:#F2CDCD">MAPFRE_ESP_APP_STORE_ISSUER_ID</span>                      | Secret | ios       | Proyecto*    | ios       | SI (si se usa capacitor)  |                                    |
+| <span style="color:#F2CDCD">MAPFRE_ESP_APP_STORE_ADMIN_API_KEY_P8</span>               | Secret | ios       | Proyecto*    | ios       | SI (si se usa capacitor)  |                                    |
+| ANDROID_MATCH_GIT_BASIC_AUTHORIZATION                                                  | Secret | android   | Proyecto*    | android   | SI (si se usa capacitor)  |                                    |
+| <span style="color:#F38BA8">DIGITALHEALTH_GOOGLE_PLAY_SERVICE_ACCOUNT_JSON</span>      | Secret | android   | Proyecto*    | android   | SI (si se usa capacitor)  |                                    |
+| <span style="color:#F38BA8">MAPFRE_ESP_GOOGLE_PLAY_SERVICE_ACCOUNT_JSON</span>         | Secret | android   | Proyecto*    | android   | SI (si se usa capacitor)  |                                    |
+| <span style="color:#89ddff">DIGITALHEALTH_ANDROID_KEYSTORE_PASSWORD</span>             | Secret | android   | Proyecto*    | android   | SI (si se usa capacitor)  |                                    |
+| <span style="color:#89ddff">DIGITALHEALTH_ANDROID_KEYSTORE_KEY_ALIAS</span>            | Secret | android   | Proyecto*    | android   | SI (si se usa capacitor)  |                                    |
+| <span style="color:blue">DIGITALHEALTH_ANDROID_KEYSTORE_KEY_PASSWORD</span>         | Secret | android   | Proyecto*    | android   | SI (si se usa capacitor)  |                                    |
+| <span style="color:#89ddff">MAPFRE_ESP_ANDROID_KEYSTORE_PASSWORD</span>                | Secret | android   | Proyecto*    | android   | SI (si se usa capacitor)  |                                    |
+| <span style="color:#89ddff">MAPFRE_ESP_ANDROID_KEYSTORE_KEY_ALIAS</span>               | Secret | android   | Proyecto*    | android   | SI (si se usa capacitor)  |                                    |
+| <span style="color:#89ddff">MAPFRE_ESP_ANDROID_KEYSTORE_KEY_PASSWORD</span>            | Secret | android   | Proyecto*    | android   | SI (si se usa capacitor)  |                                    |
+| <span style="color:#89ddff">MAPFRE_ESP_ENTERPRISE_ANDROID_KEYSTORE_PASSWORD</span>     | Secret | android   | Proyecto*    | android   | SI (si se usa capacitor)  |                                    |
+| <span style="color:#89ddff">MAPFRE_ESP_ENTERPRISE_ANDROID_KEYSTORE_KEY_ALIAS</span>    | Secret | android   | Proyecto*    | android   | SI (si se usa capacitor)  |                                    |
+ | <span style="color:blue">DIGITALHEALTH_ANDROID_KEYSTORE_KEY_ALIAS</span>            | Secret | android   | Proyecto*    | android   | SI (si se usa capacitor)  |                                    |
