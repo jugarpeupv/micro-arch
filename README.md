@@ -1,6 +1,9 @@
 # Architecture
 
 $\color{red}{lorem ipsum}$
+$\color{#f00}{\textsf{lorem ipsum}}$
+
+\color{red}hi
 
 The architecture is implemented using the following technologies `kubernetes`, `mysql`, `mongodb`, `actix-web`, `jwt`, `python`, `node`, `rabbitmq`
 
